@@ -13,7 +13,9 @@ def merge_and_sort_least_to_greatest(list1, list2):
     for counter in range(0, len(final_list) - 1):
         for i in range(0, len(final_list) - 1):
             # checks if the current number is less than or equal to the next number
-            if (final_list[i] < final_list[i + 1]) | (final_list[i] == final_list[i + 1]):
+            if (final_list[i] < final_list[i + 1]) | (
+                final_list[i] == final_list[i + 1]
+            ):
                 continue
             # if the current number is greater than the next number
             elif final_list[i] > final_list[i + 1]:
@@ -22,6 +24,7 @@ def merge_and_sort_least_to_greatest(list1, list2):
                 final_list[i] = final_list[i + 1]
                 final_list[i + 1] = temp
     return final_list
+
 
 # concatenates the two input lists then sorts them greatest to least
 def merge_and_sort_greatest_to_least(list1, list2):
@@ -32,7 +35,9 @@ def merge_and_sort_greatest_to_least(list1, list2):
     for counter in range(0, len(final_list) - 1):
         for i in range(0, len(final_list) - 1):
             # checks if the current number is less than or equal to the next number
-            if (final_list[i] > final_list[i + 1]) | (final_list[i] == final_list[i + 1]):
+            if (final_list[i] > final_list[i + 1]) | (
+                final_list[i] == final_list[i + 1]
+            ):
                 continue
             # if the current number is greater than the next number
             elif final_list[i] < final_list[i + 1]:
@@ -41,6 +46,7 @@ def merge_and_sort_greatest_to_least(list1, list2):
                 final_list[i] = final_list[i + 1]
                 final_list[i + 1] = temp
     return final_list
+
 
 # creates a number line with the numbers separated by the correct amount compared to each other
 def number_line(sort_list, line_length):
@@ -76,8 +82,12 @@ def main():
     print("then it adds and sorts them greatest to least or least to greatest")
 
     # get user input
-    user_list1_str = input("enter a list of integers separated with comas e.g.'1,2,3': ")
-    user_list2_str = input("enter a list of integers separated with comas e.g.'4,5,6': ")
+    user_list1_str = input(
+        "enter a list of integers separated with comas e.g.'1,2,3': "
+    )
+    user_list2_str = input(
+        "enter a list of integers separated with comas e.g.'4,5,6': "
+    )
 
     # split the user input into lists
     user_list1 = user_list1_str.split(",")
